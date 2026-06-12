@@ -1,33 +1,31 @@
-# 📈 Quantitative Trading & Algorithmic Strategy Sandbox
+# 📈 Quantitative Trading Backtest Sandbox
 
-A data-driven development space dedicated to designing, optimizing, and backtesting quantitative trading models. This repository hosts algorithmic strategy implementations tested across crypto and equity markets using a locally deployed backtesting architecture.
-
----
-
-## 📂 Project Focus & Core Philosophy
-
-### 1. Market Data Ingestion & Asset Classes
-* **Cryptocurrency ($SOL):** Focused heavily on Solana ($SOL) market mechanics, parsing high-fidelity historical and live market structures fetched through the Coinbase API.
-* **Large-Cap Equities (Big 100):** Integrated the `yfinance` library to dynamically pull raw historical financial data for top 100 large-cap US equities to model stock market patterns.
-* **Multi-Timeframe & Asset Optimization:** Built automated optimization loops testing historical intervals spanning from high-frequency 1-minute candles for scalping up to 4-hour horizons to capture macro trend-following movements.
-
-### 2. Strategy Ideation & Fundamental Approach
-* **The "Less is More" Metric Insight:** Through extensive historical backtesting, I discovered that overloading a script with excessive technical indicators degrades signal reliability and causes overfitting. 
-* **Core Indicators:** Pivoted the architecture away from heavy indicator noise, focusing on market fundamentals and structural price action—specifically **Volume-Weighted Analysis** and **Trend Break & Retest** setups to capture genuine market direction.
-* **Performance Metrics:** Evaluated every strategy variation based on strict institutional risk management rules, actively monitoring win-rates, maximum drawdown (MDD), and Risk-Reward (R:R) Ratios to confirm true mathematical edge.
-
-### 3. AI-Assisted Advanced Quantitative Experiments
-* **LLM Collaboration Pipeline:** Effectively leveraged advanced AI agents (Claude) to bridge high-level quantitative finance mathematics with executable, asynchronous code logic.
-* **Advanced Mathematical Models:** Prompt-engineered and implemented structural codebase experiments evaluating professional algorithmic concepts, including:
-  * **Kalman Filters:** For dynamic price smoothing and noise reduction.
-  * **Stochastic Modeling:** Exploring Brownian Motion and Markov Chains to predict probability paths and mean reversion tendencies.
+A personal sandbox repository for testing and validating various trading strategies. The main goal of this project is to take interesting ideas found on the internet or custom hypotheses and run them through historical data to see if they actually work.
 
 ---
 
-## 🛠️ Infrastructure & Tech Stack
-* **Backtesting Engine:** QuantConnect LEAN Engine (Locally deployed via CLI to bypass cloud limitations and run unrestricted free testing)
+## 📂 Project Focus & Setup
+
+### 1. Backtesting Environment (Docker & LEAN)
+* **Local LEAN Engine:** Deployed the QuantConnect LEAN engine locally using **Docker** and the LEAN CLI to run free, unrestricted backtests without cloud limitations.
+* **Data Sources:** Connected to the Coinbase API to fetch historical market data for Solana ($SOL) and utilized `yfinance` to pull historical charts for large-cap stocks.
+
+### 2. Strategy Testing & Optimization
+* **Multi-Timeframe Testing:** Tested strategies across various intervals, ranging from 1-minute to 4-hour candles, to find the most optimal timeframe for each setup.
+* **Parameter Optimization:** Ran optimization loops to tweak variables and find the best-performing combinations for specific market conditions.
+* **Core Logic:** Focused primarily on testing fundamental concepts rather than cluttering scripts with too many indicators. Main areas of testing include **Volume-Weighted Analysis**, **Trend Break & Retest** setups, and Mean Reversion.
+* **Basic Performance Metrics:** Evaluated results based on straightforward execution metrics, tracking the simple win-rate and Risk-Reward (R:R) Ratios.
+
+### 3. AI-Assisted Scripting (Claude)
+* Used AI coding assistants (Claude) to help write and refactor the backtesting scripts.
+* Utilized AI to implement and experiment with more complex mathematical concepts found in quantitative trading—such as Kalman Filters, Brownian Motion, and Markov Chains—to see how they perform in historical simulations.
+
+---
+
+## 🛠️ Tech Stack
+* **Engine/Infrastructure:** QuantConnect LEAN Engine, Docker, LEAN CLI
 * **Languages:** Python, C#
-* **Libraries & APIs:** `yfinance`, Coinbase API, NumPy, Pandas
+* **Libraries & APIs:** `yfinance`, Coinbase API, Pandas, NumPy
 
 ---
-*For a comprehensive high-level breakdown of my full portfolio, interactive game mechanics, and full-stack web applications, please visit my main profile: [github.com/limguytheboy](https://github.com/limguytheboy)*
+*For a high-level overview of my other projects, including unity game prototypes and full-stack web apps, please visit my main profile: [github.com/limguytheboy](https://github.com/limguytheboy)*
